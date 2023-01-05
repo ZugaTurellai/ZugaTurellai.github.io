@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Ai-Exploration</title>
+		<title>AI-Exploration</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -43,16 +43,16 @@
 							<section id="content">
 								<a class="image fit"><img src="images/AI exploration picture 1.png" alt="" /></a>
 								<h3>Enemies AI</h3>
-										<p>In this project i have thus far created a fully functional melee Ai, compelete with pathfinding, attack animations and Ai perception, I have also created a less finsihed Flying Ai which by its nature cannot use pathfinding and thus has movement functions created by me</p>
+										<p>In this project i have thus far created a fully functional melee AI, compelete with pathfinding, attack animations and Ai perception, I have also created a less finsihed Flying Ai which by its nature cannot use pathfinding and thus has movement functions created by me</p>
 								<h3>Melee Enemy</h3>
 								<p>The melee enemy was naturally the first one of the two i made first, as it has more in-built functions such as Ai move to that i could use to tackel the problems of rotation and movement, though i would still have to face them later with the Flying Ai.
-									I will start by showing the overall behavior tree so that you can see overall how the Ai functions </p>
+									I will start by showing the overall behavior tree so that you can see overall how the AI functions </p>
 								<a class="image fit"><img src="images/AI exploration picture 2.png" alt="" /></a>
 								</ul>
-								<p> As shown above the Ai has two main modes, patrolling and chasing. When the Ai does not see the player
+								<p> As shown above the AI has two main modes, patrolling and chasing. When the AI does not see the player
 									it will be in the Patrol mode and will move to a reachable location within range, and then pause for a second.
 								However if it sees the player it will change to Chase mode mid patrol and begin chasing the player, and in the event that it loses sight of the player it will go to the last known location of them before returning to patrol mode.
-								Once the Ai is close enough to the player it will begin to attack, and will continue to attack until the player is out of range or the player is no longer detected. </p>
+								Once the AI is close enough to the player it will begin to attack, and will continue to attack until the player is out of range or the player is no longer detected. </p>
 								<p>Above is the Task i made to play the attack animation, it will not start another action until it has compeleted the animation. </p>
 								<a class="image fit"><img src="images/AI exploration picture 3.png" alt="" /></a>
 								<p> Now i naturally had to learn how to actually animate more than just the attacks, including the run animations, 
@@ -62,21 +62,21 @@
 								<p>The first picture shows the animation set in the AB_Dragon_Ground box and then puts the Ai's current speed into it, and then sets the defualt animation to the animation of walking at that speed</p>
 								<p>The second picture shows the process to set the speed in the first picture.</p>
 								<h3>Flying Enemy</h3>
-								<p> The Flying Ai was a lot more difficult to make, as it has no built in functions to help with movement, and thus i had to make my own. 
-									However i did use the same behavior tree as the melee Ai, and therefore the Ai will still patrol and chase the player, but it will do so by flying to the location and using a completly different animation set. </p>
+								<p> The Flying AI was a lot more difficult to make, as it has no built in functions to help with movement, and thus i had to make my own. 
+									However i did use the same behavior tree as the melee AI, and therefore the AI will still patrol and chase the player, but it will do so by flying to the location and using a completly different animation set. </p>
 								<a class="image fit"><img src="images/AI exploration picture 6.png" alt="" /></a>
-								<p>Then we have the movement functions I made to emulate the Ai move to in-built function but for Flying and without the use of the Navmesh</p>
+								<p>Then we have the movement functions I made to emulate the AI move to in-built function but for Flying and without the use of the Navmesh</p>
 								<a class="image fit"><img src="images/AI exploration picture 7.png" alt="" /></a>
-								<p>As you can see the Ai will move to the location by using the vector between the Ai and the location and then multiplying it by the speed of the Ai. </p>
+								<p>As you can see the AI will move to the location by using the vector between the AI and the location and then multiplying it by the speed of the Ai. </p>
 								<p>Now we have the Rotate functuon, which is the the one currently giving me problems. The Rotate to player, shown below, works perfectly fine.
-									However, the Rotate to location function does not work properally as the Ai will not look in the direction of the patrol point but will instead 
+									However, the Rotate to location function does not work properally as the AI will not look in the direction of the patrol point but will instead 
 									look in a simingly random direction. </p>
 								<a class="image fit"><img src="images/AI exploration picture 8.png" alt="" /></a>
 								<p>While that is all i have done currently once i finish the rotation i believe i know who to transtion between
-									flying and ground modes, and then i will be able to make a fully functional dragon Ai that makes use of ground
+									flying and ground modes, and then i will be able to make a fully functional dragon AI that makes use of ground
 								and air assualts. </p>
 								<h3>Conclusion</h3>
-								<p>Here is a video of the current work in progress Ai in action, here is the link if the video doesn't work
+								<p>Here is a video of the current work in progress AI in action, here is the link if the video doesn't work
 								 <a href="https://youtu.be/L9-l9bh3SoI">Video</a>.
 								</p>
 								<iframe width="560" height="315" src="https://youtu.be/L9-l9bh3SoI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
